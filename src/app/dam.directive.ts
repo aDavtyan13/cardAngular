@@ -10,11 +10,14 @@ export class DamDirective {
   constructor(
     private elementRef: ElementRef) {
   }
+  
   @HostListener('keyup', ['$event.target.value'])
-  onKeyup(value) {
-    this.elem.value.style 
+  onkeyup(dam) {
+    if(dam.length>0){
+      this.elem.value = this.elem.value.match(new RegExp('[0-9]{1,4}', 'g')).join(" ");
+     
+    } 
 
-    // alert('dam');
   }
 
 }

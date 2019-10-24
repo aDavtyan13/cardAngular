@@ -1,8 +1,6 @@
-<input type="number" appDam>
-<!-- <input (keyup)="onKey($event)" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==12) return false;" appDam />
-<p>{{values}}</p>  -->
+<input type="text"  maxlength="19" appDam (keypress)="numberOnly($event)">
 
-<!-- <input type="text" onkeyup="this.value=this.value.replace(/^(\d{4})(?=\d)/,'$1 ')"> -->
+
 
 
 
